@@ -1,3 +1,9 @@
+## 0.1.9
+
+Fixes:
+
+- Add Re module for syntax sugar (0545c98)
+
 ## 0.1.8
 
 Fixes:
