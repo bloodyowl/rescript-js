@@ -28,4 +28,4 @@ open ReScriptJs
 Js.Console.log("Hello world!")
 ```
 
-Available modules are listed in [RescriptJs.res](./src/RescriptJs.res)
+Available modules are listed in [ReScriptJs.res](./src/ReScriptJs.res)
