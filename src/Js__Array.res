@@ -97,5 +97,5 @@ external spliceInPlace: (array<'a>, ~start: int, ~remove: int, ~insert: array<'a
 @bs.get_index external get: (array<'a>, int) => option<'a> = ""
 @bs.set_index external set: (array<'a>, int, 'a) => unit = ""
 
-@bs.get_index external getSymbol: (array<'a>, Js__Symbol.t<'a>) => option<'a> = ""
-@bs.set_index external setSymbol: (array<'a>, Js__Symbol.t<'a>, 'a) => unit = ""
+@bs.get_index external getSymbol: (array<'a>, Js__Symbol.t<'b>) => option<'a> = ""
+@bs.set_index external setSymbol: (array<'a>, Js__Symbol.t<'b>, 'b) => unit = ""
