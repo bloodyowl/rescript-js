@@ -1,3 +1,9 @@
+## 0.1.10
+
+Fixes:
+
+- Various updates/DX improvements & fixes (54a49ff)
+
 ## 0.1.9
 
 Fixes:
