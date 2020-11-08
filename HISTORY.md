@@ -1,3 +1,9 @@
+## 0.1.7
+
+Fixes:
+
+- Fixed a case-sensitivity bug caused by VSCode (fc51dc4)
+
 ## 0.1.6
 
 Fixes:
