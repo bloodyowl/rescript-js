@@ -1,3 +1,9 @@
+## 0.1.8
+
+Fixes:
+
+- Add internal types (45681e9)
+
 ## 0.1.7
 
 Fixes:
