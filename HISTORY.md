@@ -1,3 +1,9 @@
+## 0.1.4
+
+Changes:
+
+- Fix serializer signature (e15cf24)
+
 ## 0.1.3
 
 Changes:
