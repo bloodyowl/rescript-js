@@ -1,5 +1,8 @@
 type t<'a, 'b>
 
+external fromJsPromise: Js.Promise.t<'a> => t<'a, Js.Promise.error> = "%identity"
+external toJsPromise: t<'a, 'b> => Js.Promise.t<'a> = "%identity"
+
 @bs.val external resolve: 'a => t<'a, unit> = "Promise.resolve"
 
 @bs.val external reject: 'b => t<unit, 'b> = "Promise.reject"
