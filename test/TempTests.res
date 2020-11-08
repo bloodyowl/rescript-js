@@ -17,11 +17,13 @@ open ReScriptJs.Js
 //   add(fromString("333"), fromString("222"))
 // }
 
-type rec a = {
-  a: a
-}
+type rec a = {a: a}
 let rec a = {
-  a: a
+  a: a,
 }
 
-Console.log(Serializer.deserializeUnsafe(Serializer.serializeExn([Some(1), None, None, Some(2)])))
+Console.log(
+  Serializer.serializeExn([Some(1), None, None, Some(2)])->Belt.Option.map(
+    Serializer.deserializeUnsafe,
+  ),
+)

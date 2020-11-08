@@ -6,7 +6,8 @@ let encodeUndefined = (_key, value) =>
 @bs.val external _stringify: ('a, (string, 'b) => 'c) => option<string> = "JSON.stringify"
 let serializeExn = x => _stringify(x, encodeUndefined)
 
-@bs.val external _parse: ('a, @bs.this ({..}, string, 'b) => 'c) => 'a = "JSON.parse"
+@bs.val external _parse: (string, @bs.this ({..}, string, 'b) => 'c) => 'a = "JSON.parse"
+
 let deserializeUnsafe = x => {
   let undefinedValues = []
   let value = _parse(x, @bs.this
