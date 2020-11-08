@@ -46,4 +46,9 @@ module Js = {
 
   @bs.val external window: {..} = "window"
   @bs.val external document: {..} = "document"
+
+  type t<'a> = Js.t<'a>
+  module Fn = Js.Fn
+  module MapperRt = Js.MapperRt
+  module Internal = Js.Internal
 }
