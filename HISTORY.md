@@ -1,3 +1,9 @@
+## 0.1.3
+
+Changes:
+
+- Fix serializer to prevent sparse data (aab4f81)
+
 ## 0.1.2
 
 Changes:
