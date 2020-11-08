@@ -10,7 +10,7 @@ let decodeUndefined = (_key, value) =>
   }
 
 @bs.val external _stringify: ('a, (string, 'b) => 'c) => option<string> = "JSON.stringify"
-let serialize = x => _stringify(x, encodeUndefined)
+let serializeExn = x => _stringify(x, encodeUndefined)
 
 @bs.val external _parse: ('a, (string, 'b) => 'c) => 'a = "JSON.parse"
 let deserializeUnsafe = x => _parse(x, decodeUndefined)
