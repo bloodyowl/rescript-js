@@ -1,3 +1,10 @@
+## 0.1.11
+
+Changes:
+
+- Bit of explanation (b6f3d54)
+- Move `minValue` & `maxValue` to `Int.Constants` (b6f3d54)
+
 ## 0.1.10
 
 Fixes:
