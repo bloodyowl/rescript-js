@@ -1,6 +1,9 @@
 type t<'k, 'v>
 
 @bs.new external make: unit => t<'k, 'v> = "Map"
+@bs.new external fromArray: array<('k, 'v)> => t<'k, 'v> = "Map"
+@bs.new external fromIterator: Js__Iterator.t<('k, 'v)> => t<'k, 'v> = "Map"
+
 @bs.get external size: t<'k, 'v> => int = "size"
 
 @bs.send external clear: t<'k, 'v> => unit = "clear"

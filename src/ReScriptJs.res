@@ -16,9 +16,11 @@ module Js = {
   module RegExp = Js__RegExp
   module String = Js__String
   module Undefined = Js__Undefined
+  module Symbol = Js__Symbol
   module Type = Js__Type
 
   module Iterator = Js__Iterator
+  module AsyncIterator = Js__AsyncIterator
   module Map = Js__Map
   module WeakMap = Js__WeakMap
   module Set = Js__Set
@@ -37,6 +39,8 @@ module Js = {
   module Uint8ClampedArray = Js__Uint8ClampedArray
   module BigInt64Array = Js__BigInt64Array
   module BigUint64Array = Js__BigUint64Array
+
+  module Intl = Js__Intl
 
   module Serializer = Js__Serializer
 

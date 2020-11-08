@@ -9,8 +9,10 @@
 @bs.val external copy: (@bs.as(json`{}`) _, {..}) => {..} = "Object.assign"
 
 @bs.get_index external get: ({..}, string) => option<'a> = ""
+@bs.get_index external getSymbol: ({..}, Js__Symbol.t<'a>) => option<'a> = ""
 
 @bs.set_index external set: ({..}, string, 'a) => unit = ""
+@bs.set_index external setSymbol: ({..}, Js__Symbol.t<'a>, 'a) => unit = ""
 
 @bs.val external keysToArray: {..} => array<string> = "Object.keys"
 

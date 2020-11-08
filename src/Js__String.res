@@ -106,3 +106,6 @@ external splitByRegExpAtMost: (string, Js__RegExp.t, ~limit: int) => array<optio
 @bs.send external toLocaleUpperCase: string => string = "toLocaleUpperCase"
 
 @bs.send external trim: string => string = "trim"
+
+@bs.get_index external getSymbol: (string, Js__Symbol.t<'a>) => option<'a> = ""
+@bs.set_index external setSymbol: (string, Js__Symbol.t<'a>, 'a) => unit = ""

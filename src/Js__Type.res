@@ -32,7 +32,10 @@ module Classify = {
     | "[object Undefined]" => Ok(Undefined)
     | "[object String]" => Ok(String(_asString(value)))
     | "[object Number]" => Ok(Number(_asFloat(value)))
-    | "[object Function]" => Ok(Function(_asFunction(value)))
+    | "[object Function]"
+    | "[object GeneratorFunction]"
+    | "[object AsyncFunction]" =>
+      Ok(Function(_asFunction(value)))
     | "[object Symbol]" => Ok(Symbol(_asSymbol(value)))
     | _ => Ok(Object(_asObject(value)))
     }

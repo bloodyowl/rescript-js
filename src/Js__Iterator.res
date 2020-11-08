@@ -1,8 +1,7 @@
 type t<'a>
+type next<'a>
 
-type value<'a> = {
-  done: bool,
-  value: option<'a>,
-}
+@bs.get external done: next<'a> => bool = "done"
+@bs.get external value: next<'a> => option<'a> = "value"
 
-@bs.send external next: t<'a> => value<'a> = "next"
+@bs.send external next: t<'a> => next<'a> = "next"

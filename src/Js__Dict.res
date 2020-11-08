@@ -7,6 +7,7 @@ type t<'a> = Js.Dict.t<'a>
 @bs.obj external empty: unit => t<'a> = ""
 
 @bs.val external fromArray: array<(string, 'a)> => t<'a> = "Object.fromEntries"
+@bs.val external fromIterator: Js__Iterator.t<(string, 'a)> => t<'a> = "Object.fromEntries"
 
 @bs.val external toArray: t<'a> => array<'a> = "Object.entries"
 

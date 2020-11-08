@@ -17,13 +17,16 @@ open ReScriptJs.Js
 //   add(fromString("333"), fromString("222"))
 // }
 
-type rec a = {a: a}
-let rec a = {
-  a: a,
+let myObject = {
+  "foo": "bar",
 }
 
+let currencyFormatter = Intl.NumberFormat.makeWithLocaleAndOptions(
+    "fr-FR",
+    {"currency": "EUR", "style": "currency"},
+  )
+
+Console.log(Intl.NumberFormat.supportedLocalesOf(["fr-FR", "en-US"]))
 Console.log(
-  Serializer.serializeExn([Some(1), None, None, Some(2)])->Belt.Option.map(
-    Serializer.deserializeUnsafe,
-  ),
+  currencyFormatter->Intl.NumberFormat.format(123.23),
 )

@@ -1,6 +1,9 @@
 type t<'a>
 
 @bs.new external make: unit => t<'a> = "Set"
+@bs.new external fromArray: array<'a> => t<'a> = "Set"
+@bs.new external fromIterator: Js__Iterator.t<'a> => t<'a> = "Set"
+
 @bs.get external size: t<'a> => int = "size"
 
 @bs.send external clear: t<'a> => unit = "clear"
