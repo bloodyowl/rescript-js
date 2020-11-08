@@ -1,3 +1,9 @@
+## 0.1.2
+
+Changes:
+
+- serialize -> serializeExn (554cd29)
+
 ## 0.1.1
 
 Fixes:
