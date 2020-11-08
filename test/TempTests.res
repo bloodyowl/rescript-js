@@ -24,4 +24,4 @@ let rec a = {
   a: a
 }
 
-Console.log(Serializer.deserializeUnsafe(Serializer.serializeExn(a)))
+Console.log(Serializer.deserializeUnsafe(Serializer.serializeExn([Some(1), None, None, Some(2)])))
