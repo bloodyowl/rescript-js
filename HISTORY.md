@@ -1,3 +1,9 @@
+## 0.1.6
+
+Fixes:
+
+- Fixed symbol definition for arrays (45dccba)
+
 ## 0.1.5
 
 Features:
