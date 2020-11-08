@@ -1,4 +1,4 @@
-open RescriptJs.Js
+open ReScriptJs.Js
 
 Console.log(
   Array.fromIterator(
