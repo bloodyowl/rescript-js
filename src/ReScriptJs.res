@@ -18,6 +18,7 @@ module Js = {
   module Undefined = Js__Undefined
   module Symbol = Js__Symbol
   module Type = Js__Type
+  module JSON = Js__JSON
 
   module Iterator = Js__Iterator
   module AsyncIterator = Js__AsyncIterator
@@ -46,6 +47,13 @@ module Js = {
 
   @bs.val external window: {..} = "window"
   @bs.val external document: {..} = "document"
+  @bs.val external globalThis: {..} = "globalThis"
+
+  external null: Js__Null.t<'a> = "#null"
+  external undefined: Js__Undefined.t<'a> = "#undefined"
+  external typeof: 'a => Js__Type.t = "#typeof"
+
+  include Js__Global
 
   type t<'a> = Js.t<'a>
   module Fn = Js.Fn

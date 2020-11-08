@@ -1,8 +1,12 @@
 type t<'a> = Js.Dict.t<'a>
 
 @bs.get_index external get: (t<'a>, string) => option<'a> = ""
-
 @bs.set_index external set: (t<'a>, string, 'a) => unit = ""
+@bs.val external delete: 'a => unit = "delete"
+
+let delete = (dict, string) => {
+  delete(get(dict, string))
+}
 
 @bs.obj external empty: unit => t<'a> = ""
 

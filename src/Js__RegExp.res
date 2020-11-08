@@ -3,7 +3,7 @@ type t = Js.Re.t
 module Result = {
   type t = array<string>
   @bs.get_index external fullMatch: (t, @bs.as(0) _) => string = ""
-  @bs.send external groups: (t, @bs.as(0) _) => array<string> = "slice"
+  @bs.send external matches: (t, @bs.as(1) _) => array<string> = "slice"
   @bs.get external index: t => int = "index"
   @bs.get external input: t => string = "input"
 }

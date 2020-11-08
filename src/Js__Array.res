@@ -82,8 +82,8 @@ external spliceInPlace: (array<'a>, ~start: int, ~remove: int, ~insert: array<'a
 @bs.send external forEach: (array<'a>, 'a => unit) => unit = "forEach"
 @bs.send external forEachWithIndex: (array<'a>, ('a, int) => unit) => unit = "forEach"
 
-@bs.send external map: (array<'a>, 'a => 'b) => array<'b> = "forEach"
-@bs.send external mapWithIndex: (array<'a>, ('a, int) => 'b) => array<'b> = "forEach"
+@bs.send external map: (array<'a>, 'a => 'b) => array<'b> = "map"
+@bs.send external mapWithIndex: (array<'a>, ('a, int) => 'b) => array<'b> = "map"
 
 @bs.send external reduce: (array<'a>, ('b, 'a) => 'b, 'b) => 'b = "reduce"
 @bs.send external reduceWithIndex: (array<'a>, ('b, 'a, int) => 'b, 'b) => 'b = "reduce"
@@ -97,5 +97,6 @@ external spliceInPlace: (array<'a>, ~start: int, ~remove: int, ~insert: array<'a
 @bs.get_index external get: (array<'a>, int) => option<'a> = ""
 @bs.set_index external set: (array<'a>, int, 'a) => unit = ""
 
-@bs.get_index external getSymbol: (array<'a>, Js__Symbol.t<'b>) => option<'a> = ""
-@bs.set_index external setSymbol: (array<'a>, Js__Symbol.t<'b>, 'b) => unit = ""
+@bs.get_index external getSymbol: (array<'a>, Js__Symbol.t) => option<'b> = ""
+@bs.get_index external getSymbolUnsafe: (array<'a>, Js__Symbol.t) => 'b = ""
+@bs.set_index external setSymbol: (array<'a>, Js__Symbol.t, 'b) => unit = ""

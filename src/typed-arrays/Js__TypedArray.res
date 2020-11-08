@@ -59,8 +59,8 @@ external copyWithin: (t<'a>, ~target: int, ~start: int, ~end: int) => array<'a> 
 @bs.send external forEach: (t<'a>, 'a => unit) => unit = "forEach"
 @bs.send external forEachWithIndex: (t<'a>, ('a, int) => unit) => unit = "forEach"
 
-@bs.send external map: (t<'a>, 'a => 'b) => t<'b> = "forEach"
-@bs.send external mapWithIndex: (t<'a>, ('a, int) => 'b) => t<'b> = "forEach"
+@bs.send external map: (t<'a>, 'a => 'b) => t<'b> = "map"
+@bs.send external mapWithIndex: (t<'a>, ('a, int) => 'b) => t<'b> = "map"
 
 @bs.send external reduce: (t<'a>, ('b, 'a) => 'b, 'b) => 'b = "reduce"
 @bs.send external reduceWithIndex: (t<'a>, ('b, 'a, int) => 'b, 'b) => 'b = "reduce"

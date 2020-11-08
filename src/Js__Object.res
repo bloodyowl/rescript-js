@@ -6,13 +6,15 @@
 @bs.val external createWithNull: ({..}, @bs.as(json`null`) _) => {..} = "Object.create"
 
 @bs.val external assign: ({..}, {..}) => {..} = "Object.assign"
+@bs.variadic @bs.val external assignMany: ({..}, array<{..}>) => {..} = "Object.assign"
 @bs.val external copy: (@bs.as(json`{}`) _, {..}) => {..} = "Object.assign"
 
 @bs.get_index external get: ({..}, string) => option<'a> = ""
-@bs.get_index external getSymbol: ({..}, Js__Symbol.t<'a>) => option<'a> = ""
+@bs.get_index external getSymbol: ({..}, Js__Symbol.t) => option<'a> = ""
+@bs.get_index external getSymbolUnsafe: ({..}, Js__Symbol.t) => 'a = ""
 
 @bs.set_index external set: ({..}, string, 'a) => unit = ""
-@bs.set_index external setSymbol: ({..}, Js__Symbol.t<'a>, 'a) => unit = ""
+@bs.set_index external setSymbol: ({..}, Js__Symbol.t, 'a) => unit = ""
 
 @bs.val external keysToArray: {..} => array<string> = "Object.keys"
 

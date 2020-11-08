@@ -1,5 +1,7 @@
 type t<'a> = Js.Null.t<'a>
 
+external asNullable: t<'a> => Js__Nullable.t<'a> = "%identity"
+
 external empty: t<'a> = "#null"
 
 external make: 'a => t<'a> = "%identity"

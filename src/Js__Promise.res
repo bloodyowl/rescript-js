@@ -36,6 +36,8 @@ external all6: ((t<'a, 'b>, t<'c, 'd>, t<'e, 'f>, t<'g, 'h>, t<'i, 'j>, t<'k, 'l
 
 @bs.send external flatCatch: (t<'a, 'b>, 'b => t<'c, 'd>) => t<'c, 'd> = "then"
 
+@bs.send external finally: (t<'a, 'b>, unit => unit) => t<'a, 'b> = "finally"
+
 type resolve<'a> = 'a => unit
 type reject<'a> = 'a => unit
 

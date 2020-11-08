@@ -37,11 +37,11 @@ external makeWithYMDHMSM: (
 ) => t = "Date"
 
 module UTC = {
-  @bs.new external makeWithYM: (~year: int, ~month: int) => Time.t = "Date.UTC"
-  @bs.new external makeWithYMD: (~year: int, ~month: int, ~date: int) => Time.t = "Date.UTC"
-  @bs.new
+  @bs.val external makeWithYM: (~year: int, ~month: int) => Time.t = "Date.UTC"
+  @bs.val external makeWithYMD: (~year: int, ~month: int, ~date: int) => Time.t = "Date.UTC"
+  @bs.val
   external makeWithYMDH: (~year: int, ~month: int, ~date: int, ~hours: int) => Time.t = "Date.UTC"
-  @bs.new
+  @bs.val
   external makeWithYMDHM: (
     ~year: int,
     ~month: int,
@@ -49,7 +49,7 @@ module UTC = {
     ~hours: int,
     ~minutes: int,
   ) => Time.t = "Date.UTC"
-  @bs.new
+  @bs.val
   external makeWithYMDHMS: (
     ~year: int,
     ~month: int,
@@ -58,7 +58,7 @@ module UTC = {
     ~minutes: int,
     ~seconds: int,
   ) => Time.t = "Date.UTC"
-  @bs.new
+  @bs.val
   external makeWithYMDHMSM: (
     ~year: int,
     ~month: int,
