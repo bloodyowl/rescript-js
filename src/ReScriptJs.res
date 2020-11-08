@@ -51,4 +51,5 @@ module Js = {
   module Fn = Js.Fn
   module MapperRt = Js.MapperRt
   module Internal = Js.Internal
+  module Re = Js__RegExp // needed for the %re sugar
 }
