@@ -1,3 +1,14 @@
+## 0.1.5
+
+Features:
+
+- Add `Symbol` support (571c0a4)
+- Add `Intl` support (571c0a4)
+
+Fixes:
+
+- Fixed generators/async functions classification (571c0a4)
+
 ## 0.1.4
 
 Changes:
