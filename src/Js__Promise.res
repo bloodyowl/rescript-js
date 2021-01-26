@@ -35,9 +35,9 @@ external all6: ((t<'a, 'b>, t<'c, 'd>, t<'e, 'f>, t<'g, 'h>, t<'i, 'j>, t<'k, 'l
 
 @bs.send external flatThen: (t<'a, 'b>, 'a => t<'c, 'd>) => t<'c, 'd> = "then"
 
-@bs.send external catch: (t<'a, 'b>, 'b => 'c) => t<'c, _> = "then"
+@bs.send external catch: (t<'a, 'b>, 'b => 'c) => t<'c, _> = "catch"
 
-@bs.send external flatCatch: (t<'a, 'b>, 'b => t<'c, 'd>) => t<'c, 'd> = "then"
+@bs.send external flatCatch: (t<'a, 'b>, 'b => t<'c, 'd>) => t<'c, 'd> = "catch"
 
 @bs.send external finally: (t<'a, 'b>, unit => unit) => t<'a, 'b> = "finally"
 
