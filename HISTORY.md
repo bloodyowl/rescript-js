@@ -1,3 +1,9 @@
+## 0.1.12
+
+Fixes:
+
+- Fix promise bindings (c96df58)
+
 ## 0.1.11
 
 Changes:
