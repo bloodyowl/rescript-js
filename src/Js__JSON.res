@@ -27,12 +27,12 @@ module Decode = {
 
   let classify = value => {
     switch _internalClass(value) {
-    | "[object Boolean]" => Ok(Bool(_asBool(value)))
-    | "[object Null]" => Ok(Null)
-    | "[object String]" => Ok(String(_asString(value)))
-    | "[object Number]" => Ok(Number(_asFloat(value)))
-    | "[object Array]" => Ok(Array(_asArray(value)))
-    | _ => Ok(Object(_asDict(value)))
+    | "[object Boolean]" => Bool(_asBool(value))
+    | "[object Null]" => Null
+    | "[object String]" => String(_asString(value))
+    | "[object Number]" => Number(_asFloat(value))
+    | "[object Array]" => Array(_asArray(value))
+    | _ => Object(_asDict(value))
     }
   }
 }

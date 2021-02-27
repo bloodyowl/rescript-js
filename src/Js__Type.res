@@ -27,17 +27,17 @@ module Classify = {
 
   let classify = value => {
     switch _internalClass(value) {
-    | "[object Boolean]" => Ok(Bool(_asBool(value)))
-    | "[object Null]" => Ok(Null)
-    | "[object Undefined]" => Ok(Undefined)
-    | "[object String]" => Ok(String(_asString(value)))
-    | "[object Number]" => Ok(Number(_asFloat(value)))
+    | "[object Boolean]" => Bool(_asBool(value))
+    | "[object Null]" => Null
+    | "[object Undefined]" => Undefined
+    | "[object String]" => String(_asString(value))
+    | "[object Number]" => Number(_asFloat(value))
     | "[object Function]"
     | "[object GeneratorFunction]"
     | "[object AsyncFunction]" =>
-      Ok(Function(_asFunction(value)))
-    | "[object Symbol]" => Ok(Symbol(_asSymbol(value)))
-    | _ => Ok(Object(_asObject(value)))
+      Function(_asFunction(value))
+    | "[object Symbol]" => Symbol(_asSymbol(value))
+    | _ => Object(_asObject(value))
     }
   }
 }
