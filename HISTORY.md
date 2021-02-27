@@ -1,3 +1,9 @@
+## 0.4.0
+
+Changes:
+
+- JSON.classify arrays & objects contain `JSON.t` (a257881)
+
 ## 0.3.0
 
 Changes:
