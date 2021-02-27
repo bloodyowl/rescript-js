@@ -1,3 +1,9 @@
+## 0.4.1
+
+Fix:
+
+- Fixed typo in JSON.classify (a5b7998)
+
 ## 0.4.0
 
 Changes:
