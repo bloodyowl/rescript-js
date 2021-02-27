@@ -1,29 +1,29 @@
-@bs.obj external empty: unit => {..} = ""
+@obj external empty: unit => {..} = ""
 
-@bs.val external is: ('a, 'b) => bool = "Object.is"
+@val external is: ('a, 'b) => bool = "Object.is"
 
-@bs.val external create: ({..}, {..}) => {..} = "Object.create"
-@bs.val external createWithNull: ({..}, @bs.as(json`null`) _) => {..} = "Object.create"
+@val external create: ({..}, {..}) => {..} = "Object.create"
+@val external createWithNull: ({..}, @as(json`null`) _) => {..} = "Object.create"
 
-@bs.val external assign: ({..}, {..}) => {..} = "Object.assign"
-@bs.variadic @bs.val external assignMany: ({..}, array<{..}>) => {..} = "Object.assign"
-@bs.val external copy: (@bs.as(json`{}`) _, {..}) => {..} = "Object.assign"
+@val external assign: ({..}, {..}) => {..} = "Object.assign"
+@variadic @val external assignMany: ({..}, array<{..}>) => {..} = "Object.assign"
+@val external copy: (@as(json`{}`) _, {..}) => {..} = "Object.assign"
 
-@bs.get_index external get: ({..}, string) => option<'a> = ""
-@bs.get_index external getSymbol: ({..}, Js__Symbol.t) => option<'a> = ""
-@bs.get_index external getSymbolUnsafe: ({..}, Js__Symbol.t) => 'a = ""
+@get_index external get: ({..}, string) => option<'a> = ""
+@get_index external getSymbol: ({..}, Js__Symbol.t) => option<'a> = ""
+@get_index external getSymbolUnsafe: ({..}, Js__Symbol.t) => 'a = ""
 
-@bs.set_index external set: ({..}, string, 'a) => unit = ""
-@bs.set_index external setSymbol: ({..}, Js__Symbol.t, 'a) => unit = ""
+@set_index external set: ({..}, string, 'a) => unit = ""
+@set_index external setSymbol: ({..}, Js__Symbol.t, 'a) => unit = ""
 
-@bs.val external keysToArray: {..} => array<string> = "Object.keys"
+@val external keysToArray: {..} => array<string> = "Object.keys"
 
-@bs.val external hasOwnProperty: ({..}, string) => bool = "Object.prototype.hasOwnProperty.call"
+@val external hasOwnProperty: ({..}, string) => bool = "Object.prototype.hasOwnProperty.call"
 
-@bs.val external seal: 'a => 'a = "Object.seal"
-@bs.val external preventExtensions: 'a => 'a = "Object.preventExtensions"
-@bs.val external freeze: 'a => 'a = "Object.freeze"
+@val external seal: 'a => 'a = "Object.seal"
+@val external preventExtensions: 'a => 'a = "Object.preventExtensions"
+@val external freeze: 'a => 'a = "Object.freeze"
 
-@bs.val external isSealed: 'a => bool = "Object.isSealed"
-@bs.val external isFrozen: 'a => bool = "Object.isFrozen"
-@bs.val external isExtensible: 'a => bool = "Object.isExtensible"
+@val external isSealed: 'a => bool = "Object.isSealed"
+@val external isFrozen: 'a => bool = "Object.isFrozen"
+@val external isExtensible: 'a => bool = "Object.isExtensible"

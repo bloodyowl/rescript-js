@@ -17,7 +17,7 @@ module Classify = {
     | Function(function)
     | Symbol(symbol)
 
-  @bs.val external _internalClass: 'a => string = "Object.prototype.toString.call"
+  @val external _internalClass: 'a => string = "Object.prototype.toString.call"
   external _asBool: 'a => bool = "%identity"
   external _asString: 'a => string = "%identity"
   external _asFloat: 'a => float = "%identity"

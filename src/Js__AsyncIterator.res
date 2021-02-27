@@ -5,4 +5,4 @@ type value<'a> = {
   value: option<'a>,
 }
 
-@bs.send external next: t<'a> => Js__Promise.t<value<'a>, 'b> = "next"
+@send external next: t<'a> => Js__Promise.t<value<'a>, 'b> = "next"

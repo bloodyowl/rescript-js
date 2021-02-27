@@ -1,7 +1,7 @@
 type t<'a>
 type next<'a>
 
-@bs.get external done: next<'a> => bool = "done"
-@bs.get external value: next<'a> => option<'a> = "value"
+@get external done: next<'a> => bool = "done"
+@get external value: next<'a> => option<'a> = "value"
 
-@bs.send external next: t<'a> => next<'a> = "next"
+@send external next: t<'a> => next<'a> = "next"

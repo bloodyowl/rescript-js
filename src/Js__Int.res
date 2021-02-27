@@ -1,19 +1,19 @@
 module Constants = {
-  @bs.inline let minValue = -2147483648
-  @bs.inline let maxValue = 2147483647
+  @inline let minValue = -2147483648
+  @inline let maxValue = 2147483647
 }
 
-@bs.send external toExponential: int => string = "toExponential"
-@bs.send external toExponentialWithPrecision: (int, ~digits: int) => string = "toExponential"
+@send external toExponential: int => string = "toExponential"
+@send external toExponentialWithPrecision: (int, ~digits: int) => string = "toExponential"
 
-@bs.send external toFixed: int => string = "toFixed"
-@bs.send external toFixedWithPrecision: (int, ~digits: int) => string = "toFixed"
+@send external toFixed: int => string = "toFixed"
+@send external toFixedWithPrecision: (int, ~digits: int) => string = "toFixed"
 
-@bs.send external toPrecision: int => string = "toPrecision"
-@bs.send external toPrecisionWithPrecision: (int, ~digits: int) => string = "toPrecision"
+@send external toPrecision: int => string = "toPrecision"
+@send external toPrecisionWithPrecision: (int, ~digits: int) => string = "toPrecision"
 
-@bs.send external toString: int => string = "toString"
-@bs.send external toStringWithRadix: (int, ~radix: int) => string = "toString"
-@bs.send external toLocaleString: int => string = "toLocaleString"
+@send external toString: int => string = "toString"
+@send external toStringWithRadix: (int, ~radix: int) => string = "toString"
+@send external toLocaleString: int => string = "toLocaleString"
 
-@bs.send external fromString: string => int = "Number"
+@send external fromString: string => int = "Number"

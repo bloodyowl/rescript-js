@@ -45,9 +45,9 @@ module Js = {
 
   module Serializer = Js__Serializer
 
-  @bs.val external window: {..} = "window"
-  @bs.val external document: {..} = "document"
-  @bs.val external globalThis: {..} = "globalThis"
+  @val external window: {..} = "window"
+  @val external document: {..} = "document"
+  @val external globalThis: {..} = "globalThis"
 
   external null: Js__Null.t<'a> = "#null"
   external undefined: Js__Undefined.t<'a> = "#undefined"

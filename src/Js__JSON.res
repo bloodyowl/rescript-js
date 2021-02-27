@@ -1,13 +1,13 @@
 type t = Js.Json.t
 
-@bs.val external parseExn: string => t = "JSON.parse"
-@bs.val external stringify: t => string = "JSON.stringify"
-@bs.val external stringifyWithIndent: (t, @bs.as(json`null`) _, int) => string = "JSON.stringify"
+@val external parseExn: string => t = "JSON.parse"
+@val external stringify: t => string = "JSON.stringify"
+@val external stringifyWithIndent: (t, @as(json`null`) _, int) => string = "JSON.stringify"
 
-@bs.val external parseToAnyExn: string => 'a = "JSON.parse"
-@bs.val external stringifyAny: 'a => option<string> = "JSON.stringify"
-@bs.val
-external stringifyAnyWithIndent: (t, @bs.as(json`null`) _, int) => option<string> = "JSON.stringify"
+@val external parseToAnyExn: string => 'a = "JSON.parse"
+@val external stringifyAny: 'a => option<string> = "JSON.stringify"
+@val
+external stringifyAnyWithIndent: (t, @as(json`null`) _, int) => option<string> = "JSON.stringify"
 
 module Decode = {
   type t =
@@ -18,7 +18,7 @@ module Decode = {
     | Object(Js__Dict.t<t>)
     | Array(array<t>)
 
-  @bs.val external _internalClass: 'a => string = "Object.prototype.toString.call"
+  @val external _internalClass: 'a => string = "Object.prototype.toString.call"
   external _asBool: 'a => bool = "%identity"
   external _asString: 'a => string = "%identity"
   external _asFloat: 'a => float = "%identity"

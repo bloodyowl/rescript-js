@@ -69,9 +69,9 @@ Console.info("")
 Console.info("Map")
 Console.info("---")
 let map = Map.make()
-map->Map.set(1, 1)
-map->Map.set(2, 2)
-map->Map.delete(1)
+let _ = map->Map.set(1, 1)
+let _ = map->Map.set(2, 2)
+let _ = map->Map.delete(1)
 Js.log(map)
 
 Console.info("")
@@ -98,13 +98,14 @@ let promise: Promise.t<int, unit> = Promise.make((resolve, _reject) => {
   }, 100)
 })
 
-promise
-->Promise.then(x => x + 1)
-->Promise.then(x => x + 2)
-->Promise.then(Console.log)
-->Promise.finally(() => {
-  Console.log("Promise finally")
-})
+let _ =
+  promise
+  ->Promise.then(x => x + 1)
+  ->Promise.then(x => x + 2)
+  ->Promise.then(Console.log)
+  ->Promise.finally(() => {
+    Console.log("Promise finally")
+  })
 
 Console.info("")
 Console.info("RegExp")
@@ -121,7 +122,7 @@ Console.info("")
 Console.info("Set")
 Console.info("---")
 let set = Set.make()
-set->Set.add(1)->Set.add(2)->Set.delete(2)
+let _ = set->Set.add(1)->Set.add(2)->Set.delete(2)
 Js.log(set)
 
 Console.info("")
@@ -132,12 +133,15 @@ Console.log(
   "   Hello world  "
   ->String.toLowerCase
   ->String.trim
-  ->String.unsafeReplaceRegExpBy2(
-    regexp,
-    (~match as _, ~group1, ~group2, ~offset as _, ~input as _) => {
-      group1 ++ group2->String.toUpperCase
-    },
-  ),
+  ->String.unsafeReplaceRegExpBy2(regexp, (
+    ~match as _,
+    ~group1,
+    ~group2,
+    ~offset as _,
+    ~input as _,
+  ) => {
+    group1 ++ group2->String.toUpperCase
+  }),
 )
 
 Console.info("")
@@ -164,3 +168,8 @@ if globalThis["hello"] !== undefined {
   Js.log(globalThis["hello"]["bar"])
   Js.log("hello")
 }
+
+let resolvedOptions = Intl.DateTimeFormat.make()->Intl.DateTimeFormat.resolvedOptions
+let timeZone = resolvedOptions["timeZone"]
+
+let x = Some(1)->Undefined.fromOption

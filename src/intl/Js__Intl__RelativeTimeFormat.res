@@ -1,23 +1,23 @@
 type t
 
-@bs.new external make: unit => t = "Intl.RelativeTimeFormat"
-@bs.new external makeWithLocale: string => t = "Intl.RelativeTimeFormat"
-@bs.new external makeWithLocales: array<string> => t = "Intl.RelativeTimeFormat"
-@bs.new external makeWithLocaleAndOptions: (string, {..}) => t = "Intl.RelativeTimeFormat"
-@bs.new external makeWithLocalesAndOptions: (array<string>, {..}) => t = "Intl.RelativeTimeFormat"
+@new external make: unit => t = "Intl.RelativeTimeFormat"
+@new external makeWithLocale: string => t = "Intl.RelativeTimeFormat"
+@new external makeWithLocales: array<string> => t = "Intl.RelativeTimeFormat"
+@new external makeWithLocaleAndOptions: (string, {..}) => t = "Intl.RelativeTimeFormat"
+@new external makeWithLocalesAndOptions: (array<string>, {..}) => t = "Intl.RelativeTimeFormat"
 
-@bs.val
+@val
 external supportedLocalesOf: array<string> => t = "Intl.RelativeTimeFormat.supportedLocalesOf"
-@bs.val
+@val
 external supportedLocalesOfWithOptions: (array<string>, {..}) => t =
   "Intl.RelativeTimeFormat.supportedLocalesOf"
 
-@bs.send external resolvedOptions: t => {..} = "resolvedOptions"
+@send external resolvedOptions: t => {..} = "resolvedOptions"
 
 type timeUnit = [#year | #quarter | #month | #week | #day | #hour | #minute | #second]
 
-@bs.send external format: (t, int, timeUnit) => string = "format"
-@bs.send
+@send external format: (t, int, timeUnit) => string = "format"
+@send
 external formatToParts: (
   t,
   int,

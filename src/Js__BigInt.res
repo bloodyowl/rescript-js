@@ -1,15 +1,15 @@
 type t
 
-@bs.val external asIntN: (~width: int, t) => t = "BigInt.asIntN"
-@bs.val external asUintN: (~width: int, t) => t = "BigInt.asUintN"
+@val external asIntN: (~width: int, t) => t = "BigInt.asIntN"
+@val external asUintN: (~width: int, t) => t = "BigInt.asUintN"
 
-@bs.val external fromString: string => t = "BigInt"
-@bs.val external fromInt: int => t = "BigInt"
-@bs.val external fromFloat: float => t = "BigInt"
+@val external fromString: string => t = "BigInt"
+@val external fromInt: int => t = "BigInt"
+@val external fromFloat: float => t = "BigInt"
 
-@bs.send external toString: t => string = "toString"
-@bs.send external toStringWithRadix: (t, ~radix: int) => string = "toString"
-@bs.send external toLocaleString: t => string = "toLocaleString"
+@send external toString: t => string = "toString"
+@send external toStringWithRadix: (t, ~radix: int) => string = "toString"
+@send external toLocaleString: t => string = "toLocaleString"
 
 external \"+": (t, t) => t = "%addfloat"
 external \"-": (t, t) => t = "%subfloat"
