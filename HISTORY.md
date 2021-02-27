@@ -1,3 +1,9 @@
+## 0.3.0
+
+Changes:
+
+- Rollback BS (a3bec83)
+
 ## 0.2.0
 
 Changes:
