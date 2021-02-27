@@ -72,12 +72,22 @@ let map = Map.make()
 let _ = map->Map.set(1, 1)
 let _ = map->Map.set(2, 2)
 let _ = map->Map.delete(1)
-Js.log(map)
+Console.log(map)
 
 Console.info("")
 Console.info("Math")
 Console.info("---")
-Js.log(Math.ceil(Math.Constants.pi /. 2.0))
+Console.log(Math.ceil(Math.Constants.pi /. 2.0))
+
+Console.info("")
+Console.info("BigInt")
+Console.info("---")
+
+@warning("-44")
+Console.log({
+  open BigInt
+  fromInt(1) / fromFloat(12.0)
+})
 
 Console.info("")
 Console.info("Object")
@@ -114,16 +124,16 @@ let regex = RegExp.fromString("hello(\\w+)")
 let string = "helloworld"
 Console.log(regex->RegExp.test(string))
 let result = regex->RegExp.exec(string)
-Js.log(result->RegExp.Result.input)
-Js.log(result->RegExp.Result.index)
-Js.log(result->RegExp.Result.matches)
+Console.log(result->RegExp.Result.input)
+Console.log(result->RegExp.Result.index)
+Console.log(result->RegExp.Result.matches)
 
 Console.info("")
 Console.info("Set")
 Console.info("---")
 let set = Set.make()
 let _ = set->Set.add(1)->Set.add(2)->Set.delete(2)
-Js.log(set)
+Console.log(set)
 
 Console.info("")
 Console.info("String")
@@ -165,8 +175,8 @@ let timeout = setTimeout(() => {
 clearTimeout(timeout)
 
 if globalThis["hello"] !== undefined {
-  Js.log(globalThis["hello"]["bar"])
-  Js.log("hello")
+  Console.log(globalThis["hello"]["bar"])
+  Console.log("hello")
 }
 
 let resolvedOptions = Intl.DateTimeFormat.make()->Intl.DateTimeFormat.resolvedOptions
