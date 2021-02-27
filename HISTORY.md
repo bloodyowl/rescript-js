@@ -1,3 +1,10 @@
+## 0.2.0
+
+Changes:
+
+- Upgrade to BS 9 (8bbe5e7)
+- **Breaking**: `classify` doesn't return a result anymore, as it defaults to object type (af0367c)
+
 ## 0.1.12
 
 Fixes:
