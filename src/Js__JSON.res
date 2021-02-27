@@ -22,8 +22,8 @@ module Decode = {
   external _asBool: 'a => bool = "%identity"
   external _asString: 'a => string = "%identity"
   external _asFloat: 'a => float = "%identity"
-  external _asArray: 'a => array<'b> = "%identity"
-  external _asDict: 'a => Js__Dict.t<'b> = "%identity"
+  external _asArray: 'a => array<t> = "%identity"
+  external _asDict: 'a => Js__Dict.t<t> = "%identity"
 
   let classify = value => {
     switch _internalClass(value) {
