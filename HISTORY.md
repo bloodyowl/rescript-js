@@ -1,3 +1,9 @@
+## 0.4.2
+
+Features:
+
+- Add Promise.wrap (e868a31)
+
 ## 0.4.1
 
 Fix:
