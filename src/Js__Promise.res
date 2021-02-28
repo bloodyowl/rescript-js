@@ -4,8 +4,9 @@ external fromJsPromise: Js.Promise.t<'a> => t<'a, Js.Promise.error> = "%identity
 external toJsPromise: t<'a, 'b> => Js.Promise.t<'a> = "%identity"
 
 @val external resolve: 'a => t<'a, unit> = "Promise.resolve"
-
 @val external reject: 'b => t<unit, 'b> = "Promise.reject"
+
+@val external wrap: t<'a, 'b> => t<'a, 'b> = "Promise.resolve"
 
 @val external all: array<t<'a, 'b>> => t<array<'a>, 'b> = "Promise.all"
 
