@@ -102,17 +102,20 @@ let withNewProp = Object.assign(copy, {"bar": "baz"})
 Console.info("")
 Console.info("Promise")
 Console.info("---")
-let promise: Promise.t<int, unit> = Promise.make((resolve, _reject) => {
+let promise: Promise.t<int> = Promise.make((resolve, _reject) => {
   let _ = setTimeout(() => {
-    resolve(1)
+    resolve(. 1)
   }, 100)
 })
 
 let _ =
   promise
-  ->Promise.then(x => x + 1)
-  ->Promise.then(x => x + 2)
-  ->Promise.then(Console.log)
+  ->Promise.then(x => Promise.resolve(x + 1))
+  ->Promise.then(x => Promise.resolve(x + 2))
+  ->Promise.then(x => {
+    Console.log(x)
+    Promise.resolve()
+  })
   ->Promise.finally(() => {
     Console.log("Promise finally")
   })

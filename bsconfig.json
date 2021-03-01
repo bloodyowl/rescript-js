@@ -17,6 +17,7 @@
     "module": "commonjs",
     "in-source": true
   },
+  "bs-dependencies": ["@ryyppy/rescript-promise"],
   "warnings": {
     "error": "+101"
   }
