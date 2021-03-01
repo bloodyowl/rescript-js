@@ -1,3 +1,9 @@
+## 0.5.0
+
+Features:
+
+- Use @ryyppy/rescript-promise (9482beb)
+
 ## 0.4.2
 
 Features:
