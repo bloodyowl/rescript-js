@@ -30,7 +30,8 @@ Then add `rescript-js` to your `bsconfig.json`'s `bs-dependencies`:
 ```diff
  {
    "bs-dependencies": [
-+    "rescript-js",
++    "@ryyppy/rescript-promise",
++    "rescript-js"
    ]
  }
 ```
