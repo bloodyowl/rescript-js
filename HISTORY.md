@@ -1,3 +1,9 @@
+## 0.5.2
+
+Fixes:
+
+- Fixed typed array bindings (thanks [@Minnozz](https://github.com/Minnozz)!) (5953490)
+
 ## 0.5.1
 
 Fixes:
