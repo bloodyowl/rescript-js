@@ -1,3 +1,9 @@
+## 0.5.1
+
+Fixes:
+
+- Fix binding for Dict.toArray (thanks [@Minnozz](https://github.com/Minnozz)!)  (bba8959)
+
 ## 0.5.0
 
 Features:
