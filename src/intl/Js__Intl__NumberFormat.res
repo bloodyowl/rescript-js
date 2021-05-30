@@ -5,6 +5,7 @@ type t
 @new external makeWithLocales: array<string> => t = "Intl.NumberFormat"
 @new external makeWithLocaleAndOptions: (string, {..}) => t = "Intl.NumberFormat"
 @new external makeWithLocalesAndOptions: (array<string>, {..}) => t = "Intl.NumberFormat"
+@new external makeWithOptions: (@as(json`undefined`) _, {..}) => t = "Intl.NumberFormat"
 
 @val external supportedLocalesOf: array<string> => t = "Intl.NumberFormat.supportedLocalesOf"
 @val

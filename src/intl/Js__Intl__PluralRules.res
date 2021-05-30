@@ -5,6 +5,7 @@ type t
 @new external makeWithLocales: array<string> => t = "Intl.PluralRules"
 @new external makeWithLocaleAndOptions: (string, {..}) => t = "Intl.PluralRules"
 @new external makeWithLocalesAndOptions: (array<string>, {..}) => t = "Intl.PluralRules"
+@new external makeWithOptions: (@as(json`undefined`) _, {..}) => t = "Intl.PluralRules"
 
 @val external supportedLocalesOf: array<string> => t = "Intl.PluralRules.supportedLocalesOf"
 @val

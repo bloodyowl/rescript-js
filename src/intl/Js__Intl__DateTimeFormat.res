@@ -5,6 +5,7 @@ type t
 @new external makeWithLocales: array<string> => t = "Intl.DateTimeFormat"
 @new external makeWithLocaleAndOptions: (string, {..}) => t = "Intl.DateTimeFormat"
 @new external makeWithLocalesAndOptions: (array<string>, {..}) => t = "Intl.DateTimeFormat"
+@new external makeWithOptions: (@as(json`undefined`) _, {..}) => t = "Intl.DateTimeFormat"
 
 @val external supportedLocalesOf: array<string> => t = "Intl.DateTimeFormat.supportedLocalesOf"
 @val
