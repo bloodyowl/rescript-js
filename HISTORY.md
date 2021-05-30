@@ -1,5 +1,11 @@
 ## 0.5.2
 
+Features:
+
+- Add `makeWithOptions` to Intl (3048de1)
+
+## 0.5.2
+
 Fixes:
 
 - Fixed typed array bindings (thanks [@Minnozz](https://github.com/Minnozz)!) (5953490)
