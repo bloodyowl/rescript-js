@@ -2,8 +2,10 @@
 
 @val external is: ('a, 'b) => bool = "Object.is"
 
-@val external create: ({..}, {..}) => {..} = "Object.create"
-@val external createWithNull: ({..}, @as(json`null`) _) => {..} = "Object.create"
+@val external create: {..} => {..} = "Object.create"
+@val external createWithProperties: ({..}, {..}) => {..} = "Object.create"
+@val external createWithNull: (@as(json`null`) _, unit) => {..} = "Object.create"
+@val external createWithNullAndProperties: (@as(json`null`) _, {..}) => {..} = "Object.create"
 
 @val external assign: ({..}, {..}) => {..} = "Object.assign"
 @variadic @val external assignMany: ({..}, array<{..}>) => {..} = "Object.assign"

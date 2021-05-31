@@ -96,6 +96,11 @@ let myObject = {
   "foo": "bar",
 }
 
+Console.log(Object.create(myObject))
+Console.log(Object.createWithProperties(myObject, {"foo": "bar"}))
+Console.log(Object.createWithNull())
+Console.log(Object.createWithNullAndProperties({"foo": "bar"}))
+
 let copy = Object.copy(myObject)
 let withNewProp = Object.assign(copy, {"bar": "baz"})
 
