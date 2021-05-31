@@ -31,5 +31,3 @@ module Constants = {
 
 external toInt: float => int = "%intoffloat"
 external fromInt: int => float = "%identity"
-
-external mod: (float, float) => float = "?fmod_float"
