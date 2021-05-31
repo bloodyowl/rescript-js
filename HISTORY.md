@@ -1,3 +1,9 @@
+## 0.5.4
+
+Features:
+
+- Have a `ReScriptJs__Js` module (f794a8f)
+
 ## 0.5.3
 
 Features:
