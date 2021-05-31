@@ -1,3 +1,9 @@
+## 0.5.8
+
+Changes:
+
+- Remove float mod (f658a23)
+
 ## 0.5.7
 
 Features:
