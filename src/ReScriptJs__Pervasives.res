@@ -21,6 +21,8 @@ external max: ('a, 'a) => 'a = "%bs_max"
 external \"==": ('a, 'a) => bool = "%eq"
 external \"!=": ('a, 'a) => bool = "%noteq"
 
+external compare: ('a, 'a) => int = "%compare"
+
 external not: bool => bool = "%boolnot"
 external \"&&": (bool, bool) => bool = "%sequand"
 external \"||": (bool, bool) => bool = "%sequor"
