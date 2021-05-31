@@ -1,3 +1,9 @@
+## 0.5.7
+
+Features:
+
+- Add new pervasives for a test (93047ee)
+
 ## 0.5.6
 
 Features:
