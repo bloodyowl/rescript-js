@@ -68,3 +68,5 @@ external decr: ref<int> => unit = "%decr"
 type result<'a, 'b> = Belt.Result.t<'a, 'b> =
   | Ok('a)
   | Error('b)
+
+external identity: 'a => 'a = "%identity"
