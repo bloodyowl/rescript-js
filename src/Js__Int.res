@@ -17,3 +17,6 @@ module Constants = {
 @send external toLocaleString: int => string = "toLocaleString"
 
 @send external fromString: string => int = "Number"
+
+external toFloat: int => float = "%identity"
+external fromFloat: float => int = "%intoffloat"

@@ -10,6 +10,7 @@ module Constants = {
 @val external isNaN: float => bool = "isNaN"
 @val external isFinite: float => bool = "isFinite"
 @val external parseFloat: 'a => float = "parseFloat"
+// parseInt's return type is a float because it can be NaN
 @val external parseInt: 'a => float = "parseInt"
 @val external parseIntWithRadix: ('a, ~radix: int) => float = "parseInt"
 
@@ -27,3 +28,6 @@ module Constants = {
 @send external toLocaleString: float => string = "toLocaleString"
 
 @send external fromString: string => float = "Number"
+
+external toInt: float => int = "%intoffloat"
+external fromInt: int => float = "%identity"
