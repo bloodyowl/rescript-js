@@ -1,3 +1,9 @@
+## 0.5.11
+
+Changes:
+
+- Add `identity` function (eaa0847)
+
 ## 0.5.10
 
 Changes:
