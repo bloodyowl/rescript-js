@@ -20,3 +20,5 @@ module Constants = {
 
 external toFloat: int => float = "%identity"
 external fromFloat: float => int = "%intoffloat"
+
+external mod: (int, int) => int = "%modint"
