@@ -31,3 +31,5 @@ module Constants = {
 
 external toInt: float => int = "%intoffloat"
 external fromInt: int => float = "%identity"
+
+@unboxed @noalloc external mod: (float, float) => float = "caml_fmod_float" "fmod"

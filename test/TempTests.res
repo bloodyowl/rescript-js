@@ -192,8 +192,4 @@ let timeZone = resolvedOptions["timeZone"]
 
 let x = Some(1)->Undefined.fromOption
 
-
-open ReScriptJs__JsWithPervasives
-
-@warning("-44")
-let y = [1, 2, 3]->Array.map(identity)
+let z = Float.mod(1.2, 1.4)
