@@ -1,6 +1,6 @@
 {
   "name": "rescript-js",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
