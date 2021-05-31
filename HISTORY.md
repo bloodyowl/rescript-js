@@ -1,3 +1,9 @@
+## 0.5.5
+
+Features:
+
+- Fix `Object.create` (aa8edf8)
+
 ## 0.5.4
 
 Features:
