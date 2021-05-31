@@ -1,3 +1,9 @@
+## 0.5.9
+
+Changes:
+
+- Add mod to Pervasives (cc3575b)
+
 ## 0.5.8
 
 Changes:
