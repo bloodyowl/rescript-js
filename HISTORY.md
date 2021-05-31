@@ -1,3 +1,9 @@
+## 0.5.6
+
+Features:
+
+- Add convenience float/int conversion (ff91fda)
+
 ## 0.5.5
 
 Features:
