@@ -1,3 +1,9 @@
+## 0.5.10
+
+Changes:
+
+- Add compare for convenience (c0a7d8e)
+
 ## 0.5.9
 
 Changes:
