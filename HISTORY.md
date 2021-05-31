@@ -1,3 +1,9 @@
+## 0.5.12
+
+Changes:
+
+- Add `Float.mod` (42e510a)
+
 ## 0.5.11
 
 Changes:
