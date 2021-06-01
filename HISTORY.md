@@ -1,3 +1,9 @@
+## 0.5.13
+
+Features:
+
+- Add `Add BigInt.toInt` (0e726fe)
+
 ## 0.5.12
 
 Changes:
