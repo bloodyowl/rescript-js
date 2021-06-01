@@ -1,3 +1,9 @@
+## 0.5.14
+
+Features:
+
+- Add bitwise and exp to BigInt (1f81781)
+
 ## 0.5.13
 
 Features:
