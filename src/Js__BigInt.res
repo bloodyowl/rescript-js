@@ -24,3 +24,5 @@ external add: (t, t) => t = "%addfloat"
 external sub: (t, t) => t = "%subfloat"
 external mul: (t, t) => t = "%mulfloat"
 external div: (t, t) => t = "%divfloat"
+
+@noalloc external mod: (t, t) => t = "caml_fmod_float" "fmod"
