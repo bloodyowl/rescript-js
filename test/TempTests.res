@@ -193,3 +193,5 @@ let timeZone = resolvedOptions["timeZone"]
 let x = Some(1)->Undefined.fromOption
 
 let z = Float.mod(1.2, 1.4)
+
+let intFromBigInt = BigInt.fromString("10000000000")->BigInt.toInt

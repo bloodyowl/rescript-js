@@ -11,6 +11,10 @@ type t
 @send external toStringWithRadix: (t, ~radix: int) => string = "toString"
 @send external toLocaleString: t => string = "toLocaleString"
 
+@val external toFloat: t => float = "Number"
+
+let toInt = t => t->toFloat->Js__Int.fromFloat
+
 external \"+": (t, t) => t = "%addfloat"
 external \"-": (t, t) => t = "%subfloat"
 external \"*": (t, t) => t = "%mulfloat"
