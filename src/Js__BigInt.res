@@ -26,3 +26,16 @@ external mul: (t, t) => t = "%mulfloat"
 external div: (t, t) => t = "%divfloat"
 
 @noalloc external mod: (t, t) => t = "caml_fmod_float" "fmod"
+
+external land: (t, t) => t = "%andint"
+external lor: (t, t) => t = "%orint"
+external lxor: (t, t) => t = "%xorint"
+
+external lsl: (t, t) => t = "%lslint"
+external asr: (t, t) => t = "%asrint"
+
+let exp = (x: t, y: t) => {
+  let _ = x
+  let _ = y
+  %raw(`x ** y`)
+}
