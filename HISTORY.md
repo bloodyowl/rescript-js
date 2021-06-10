@@ -1,3 +1,9 @@
+## 0.5.15
+
+Features:
+
+- Fix a bug where @obj required a missing type (dea9c76)
+
 ## 0.5.14
 
 Features:
