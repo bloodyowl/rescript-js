@@ -195,3 +195,9 @@ let x = Some(1)->Undefined.fromOption
 let z = Float.mod(1.2, 1.4)
 
 let intFromBigInt = BigInt.fromString("10000000000")->BigInt.toInt
+
+module Bugfix = {
+  open ReScriptJs
+  @obj external foo: (~bar: string=?, unit) => _ = ""
+  Console.log(foo(~bar="1", ()))
+}
