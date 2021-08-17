@@ -1,3 +1,7 @@
+## 0.5.16
+
+- Add `padStart` and `padEnd` to string (848a904)
+
 ## 0.5.15
 
 Features:
