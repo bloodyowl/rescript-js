@@ -1,3 +1,7 @@
+## 0.5.17
+
+- Add `trimStart` and `trimEnd` to string (183cd16)
+
 ## 0.5.16
 
 - Add `padStart` and `padEnd` to string (848a904)
