@@ -107,6 +107,9 @@ external splitByRegExpAtMost: (string, Js__RegExp.t, ~limit: int) => array<optio
 
 @send external trim: string => string = "trim"
 
+@send external padStart: (string, int, string) => string = "padStart"
+@send external padEnd: (string, int, string) => string = "padEnd"
+
 @get_index external getSymbol: (string, Js__Symbol.t) => option<'a> = ""
 @get_index external getSymbolUnsafe: (string, Js__Symbol.t) => 'a = ""
 @set_index external setSymbol: (string, Js__Symbol.t, 'a) => unit = ""
