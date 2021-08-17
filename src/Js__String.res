@@ -106,6 +106,8 @@ external splitByRegExpAtMost: (string, Js__RegExp.t, ~limit: int) => array<optio
 @send external toLocaleUpperCase: string => string = "toLocaleUpperCase"
 
 @send external trim: string => string = "trim"
+@send external trimStart: string => string = "trimStart"
+@send external trimEnd: string => string = "trimEnd"
 
 @send external padStart: (string, int, string) => string = "padStart"
 @send external padEnd: (string, int, string) => string = "padEnd"
