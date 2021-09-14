@@ -27,7 +27,7 @@ module Constants = {
 @send external toStringWithRadix: (float, ~radix: int) => string = "toString"
 @send external toLocaleString: float => string = "toLocaleString"
 
-@send external fromString: string => float = "Number"
+@val external fromString: string => float = "Number"
 
 external toInt: float => int = "%intoffloat"
 external fromInt: int => float = "%identity"
