@@ -38,6 +38,7 @@ Console.info("Float/Int")
 Console.info("---")
 Console.log(10.2->Float.toFixedWithPrecision(~digits=2))
 Console.log(10->Int.toFixedWithPrecision(~digits=2))
+Console.log("hi"->Int.fromString)
 
 Console.info("")
 Console.info("Intl")
