@@ -1,8 +1,22 @@
+## 0.6.0
+
+Breaking Changes:
+
+- `Int.fromString` now returns an option type (cd97ba6)
+
+Fixes:
+
+- Fix bindings for `Int.fromString` and `Float.fromString` (Thanks [@illusionalsagacity](https://github.com/illusionalsagacity)) (180ef99)
+
 ## 0.5.17
+
+Features:
 
 - Add `trimStart` and `trimEnd` to string (183cd16)
 
 ## 0.5.16
+
+Features:
 
 - Add `padStart` and `padEnd` to string (848a904)
 
