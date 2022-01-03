@@ -40,7 +40,7 @@ external copyWithin: (array<'a>, ~target: int, ~start: int, ~end: int) => array<
 
 @variadic @send
 external spliceInPlace: (array<'a>, ~start: int, ~remove: int, ~insert: array<'a>) => array<'a> =
-  "sort"
+  "splice"
 
 @send external unshift: (array<'a>, 'a) => int = "unshift"
 
