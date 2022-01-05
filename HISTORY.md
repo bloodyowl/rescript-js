@@ -1,3 +1,9 @@
+## 0.6.2
+
+Fixes:
+
+- Fix binding to `String.match` (23a6d1a)
+
 ## 0.6.1
 
 Fixes:
