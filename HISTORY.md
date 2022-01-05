@@ -1,3 +1,9 @@
+## 0.6.1
+
+Fixes:
+
+- Fix binding to `spliceInPlace` (Thanks [@dmtrKovalenko](https://github.com/dmtrKovalenko)) (e8d29d6)
+
 ## 0.6.0
 
 Breaking Changes:
@@ -108,7 +114,7 @@ Fixes:
 
 Fixes:
 
-- Fix binding for Dict.toArray (thanks [@Minnozz](https://github.com/Minnozz)!)  (bba8959)
+- Fix binding for Dict.toArray (thanks [@Minnozz](https://github.com/Minnozz)!) (bba8959)
 
 ## 0.5.0
 
