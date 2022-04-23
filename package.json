@@ -7,8 +7,9 @@
     "watch": "bsb -make-world -w"
   },
   "keywords": [
-    "BuckleScript"
+    "rescript"
   ],
+  "homepage": "https://github.com/bloodyowl/rescript-js",
   "author": "bloodyowl <bloodyowl@icloud.com>",
   "license": "MIT",
   "devDependencies": {
