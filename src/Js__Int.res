@@ -28,4 +28,13 @@ let fromString: string => option<int> = x => {
   }
 }
 
+let fromStringWithRadix: (string, ~radix: int) => option<int> = (x, ~radix) => {
+  let maybeInt = Js__Float.parseIntWithRadix(x, ~radix)
+  if Js__Float.isNaN(maybeInt) {
+    None
+  } else {
+    Some(fromFloat(maybeInt))
+  }
+}
+
 external mod: (int, int) => int = "%modint"
