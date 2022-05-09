@@ -19,15 +19,6 @@ module Constants = {
 external toFloat: int => float = "%identity"
 external fromFloat: float => int = "%intoffloat"
 
-let fromString: string => option<int> = x => {
-  let maybeInt = Js__Float.parseIntWithRadix(x, ~radix=10)
-  if Js__Float.isNaN(maybeInt) {
-    None
-  } else {
-    Some(fromFloat(maybeInt))
-  }
-}
-
 let fromStringWithRadix: (string, ~radix: int) => option<int> = (x, ~radix) => {
   let maybeInt = Js__Float.parseIntWithRadix(x, ~radix)
   if Js__Float.isNaN(maybeInt) {
@@ -36,5 +27,6 @@ let fromStringWithRadix: (string, ~radix: int) => option<int> = (x, ~radix) => {
     Some(fromFloat(maybeInt))
   }
 }
+let fromString: string => option<int> = fromStringWithRadix(~radix=10)
 
 external mod: (int, int) => int = "%modint"
