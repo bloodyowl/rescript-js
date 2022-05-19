@@ -6,6 +6,7 @@ let reject = reject
 let make = make
 let catch = catch
 let then = then
+let thenResolve = thenResolve
 let finally = finally
 let race = race
 let all = all
