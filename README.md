@@ -15,7 +15,7 @@ Main differences:
 - A DX that overall _looks_ more like JS (if you `open Js`, you should feel at home)
 - Simple bindings to `window`, `document` and `globalThis` (they're basically typed as any)
 
-Nearly all data structures maintain compatible types with the default `Js` module, with the exception of `Promise`, for which we add a second type parameter for rejection (but don't worry, we provide interop).
+Nearly all data structures maintain compatible types with the default `Js` module.
 
 ## Installation
 
@@ -30,7 +30,6 @@ Then add `rescript-js` to your `bsconfig.json`'s `bs-dependencies`:
 ```diff
  {
    "bs-dependencies": [
-+    "@ryyppy/rescript-promise",
 +    "rescript-js"
    ]
  }
