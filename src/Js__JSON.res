@@ -1,10 +1,13 @@
 type t = Js.Json.t
+type jsonReviver
 
 @val external parseExn: string => t = "JSON.parse"
+@val external parseExnWithReviver: (string, jsonReviver) => t = "JSON.parse"
 @val external stringify: t => string = "JSON.stringify"
 @val external stringifyWithIndent: (t, @as(json`null`) _, int) => string = "JSON.stringify"
 
 @val external parseToAnyExn: string => 'a = "JSON.parse"
+@val external parseToAnyExnWithReviver: (string, jsonReviver) => 'a = "JSON.parse"
 @val external stringifyAny: 'a => option<string> = "JSON.stringify"
 @val
 external stringifyAnyWithIndent: (t, @as(json`null`) _, int) => option<string> = "JSON.stringify"
