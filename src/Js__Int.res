@@ -16,17 +16,21 @@ module Constants = {
 @send external toStringWithRadix: (int, ~radix: int) => string = "toString"
 @send external toLocaleString: int => string = "toLocaleString"
 
-@val external fromString: (string, ~radix: @as(json`10`) _) => float = "parseInt"
-
 external toFloat: int => float = "%identity"
 external fromFloat: float => int = "%intoffloat"
 
-let fromString = x => {
-  let maybeInt = fromString(x)
+let fromString = (~radix=?, x) => {
+  let maybeInt = switch radix {
+  | Some(radix) => Js__Float.parseIntWithRadix(x, ~radix)
+  | None => Js__Float.parseInt(x)
+  }
   if Js__Float.isNaN(maybeInt) {
     None
+  } else if maybeInt > Constants.maxValue->toFloat || maybeInt < Constants.minValue->toFloat {
+    None
   } else {
-    Some(fromFloat(maybeInt))
+    let asInt = fromFloat(maybeInt)
+    Some(asInt)
   }
 }
 

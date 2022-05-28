@@ -99,9 +99,9 @@ let myObject = {
 }
 
 Console.log(Object.create(myObject))
-Console.log(Object.createWithProperties(myObject, {"foo": "bar"}))
+Console.log(Object.createWithProperties(myObject, {"foo": {"value": "bar"}}))
 Console.log(Object.createWithNull())
-Console.log(Object.createWithNullAndProperties({"foo": "bar"}))
+Console.log(Object.createWithNullAndProperties({"foo": {"value": "bar"}}))
 
 let copy = Object.copy(myObject)
 let withNewProp = Object.assign(copy, {"bar": "baz"})
@@ -203,3 +203,9 @@ module Bugfix = {
   @obj external foo: (~bar: string=?, unit) => _ = ""
   Console.log(foo(~bar="1", ()))
 }
+
+Console.log(Int.fromString("1231231"))
+Console.log(Int.fromString("12.22"))
+Console.log(Int.fromString("99999999999999999"))
+Console.log(Int.fromString("99999999999999999"))
+Console.log(Int.fromString(~radix=2, "010101"))
