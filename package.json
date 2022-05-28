@@ -16,6 +16,6 @@
     "bs-platform": "^8.3.0"
   },
   "dependencies": {
-    "@ryyppy/rescript-promise": "^2.0.0"
+    "@ryyppy/rescript-promise": "^2.1.0"
   }
 }
