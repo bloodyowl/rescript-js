@@ -16,11 +16,11 @@ external asJsonReplacer: 'a => jsonReplacer = "%identity"
 @val external parseToAnyExnWithReviver: (string, jsonReviver) => 'a = "JSON.parse"
 @val external stringifyAny: 'a => option<string> = "JSON.stringify"
 @val
-external stringifyAnyWithIndent: (t, @as(json`null`) _, int) => option<string> = "JSON.stringify"
+external stringifyAnyWithIndent: ('a, @as(json`null`) _, int) => option<string> = "JSON.stringify"
 @val
-external stringifyAnyWithReplacer: (t, jsonReplacer) => option<string> = "JSON.stringify"
+external stringifyAnyWithReplacer: ('a, jsonReplacer) => option<string> = "JSON.stringify"
 @val
-external stringifyAnyWithReplacerAndIndent: (t, jsonReplacer, int) => option<string> = "JSON.stringify"
+external stringifyAnyWithReplacerAndIndent: ('a, jsonReplacer, int) => option<string> = "JSON.stringify"
 
 module Decode = {
   type t =
