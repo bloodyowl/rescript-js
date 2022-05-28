@@ -3,7 +3,7 @@ type t = Js.Json.t
 type jsonReviver
 external asJsonReviver: 'a => jsonReviver = "%identity"
 type jsonReplacer
-external asJsonPlacer: 'a => jsonReplacer = "%identity"
+external asJsonReplacer: 'a => jsonReplacer = "%identity"
 
 @val external parseExn: string => t = "JSON.parse"
 @val external parseExnWithReviver: (string, jsonReviver) => t = "JSON.parse"
