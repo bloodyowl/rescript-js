@@ -1,3 +1,15 @@
+## 0.7.0
+
+Features:
+
+- Allow `radix` option in `Int.fromString` (b9407eb)
+- Expose `Js.Exn` (2a8259e)
+
+Changes:
+
+- **Breaking**: add extra int overflow checks in `Int.fromString` (b9407eb)
+- **Breaking**: make `Promise` module integration simpler (Thanks [@DZakh](https://github.com/DZakh)) (9f785b4)
+
 ## 0.6.2
 
 Fixes:
