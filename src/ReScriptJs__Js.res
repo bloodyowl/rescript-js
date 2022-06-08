@@ -1,5 +1,6 @@
 module Array = Js__Array
 module Console = Js__Console
+module DataView = Js__DataView
 module Date = Js__Date
 module Dict = Js__Dict
 module Error = Js__Error
