@@ -25,7 +25,7 @@ external sub: (t, t) => t = "%subfloat"
 external mul: (t, t) => t = "%mulfloat"
 external div: (t, t) => t = "%divfloat"
 
-@noalloc external mod: (t, t) => t = "caml_fmod_float" "fmod"
+@noalloc external mod: (t, t) => t = "?fmod_float"
 
 external land: (t, t) => t = "%andint"
 external lor: (t, t) => t = "%orint"
