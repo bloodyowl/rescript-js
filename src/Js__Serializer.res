@@ -12,7 +12,7 @@ let deserializeUnsafe = x => {
   let undefinedValues = []
   let value = _parse(x, @this (this, key, value) => {
     switch value->Js__Nullable.toOption {
-    | Some(x) when x.__rescript_private_none =>
+    | Some(x) if x.__rescript_private_none =>
       let _ = undefinedValues->Js__Array.push((this, key))
     | _ => ()
     }
