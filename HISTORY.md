@@ -1,3 +1,11 @@
+## 1.0.0-beta.1
+
+> **Note**: from version 1.x.x, the library requires rescript@^10.x.x
+
+Changes:
+
+- The library is now compatible with rescript@^10.0.0-rc.1 (Thanks [@Minnozz](https://github.com/Minnozz)) (6ab0774)
+
 ## 0.7.0
 
 Features:
