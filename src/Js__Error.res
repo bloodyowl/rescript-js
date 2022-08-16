@@ -1,6 +1,6 @@
 type t = Js.Exn.t
 
-external fromException: exn => option<t> = "caml_as_js_exn"
+external fromException: exn => option<t> = "?as_js_exn"
 external toException: t => exn = "%identity"
 
 @get external stack: t => option<string> = "stack"
