@@ -134,9 +134,9 @@ let regex = RegExp.fromString("hello(\\w+)")
 let string = "helloworld"
 Console.log(regex->RegExp.test(string))
 let result = regex->RegExp.exec(string)
-Console.log(result->RegExp.Result.input)
-Console.log(result->RegExp.Result.index)
-Console.log(result->RegExp.Result.matches)
+Console.log(result->Belt.Option.map(RegExp.Result.input))
+Console.log(result->Belt.Option.map(RegExp.Result.index))
+Console.log(result->Belt.Option.map(RegExp.Result.matches))
 
 Console.info("")
 Console.info("Set")
