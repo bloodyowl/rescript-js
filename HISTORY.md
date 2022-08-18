@@ -1,3 +1,14 @@
+## 1.0.0-beta.2
+
+Changes:
+
+- Start exposing `DataView` (Thanks [@LoganGrier](https://github.com/LoganGrier)) (c7fdfd5)
+
+Fixes:
+
+- Fix `exec` return type (Thanks [@Minnozz](https://github.com/Minnozz)) (e916df9)
+- Stop using `caml_as_js_exn` (Thanks [@jeddeloh](https://github.com/jeddeloh)) (d44fa7e)
+
 ## 1.0.0-beta.1
 
 > **Note**: from version 1.x.x, the library requires rescript@^10.x.x
