@@ -12,7 +12,7 @@ module Result = {
 @new external fromStringWithFlags: (string, ~flags: string) => t = "RegExp"
 
 @send external test: (t, string) => bool = "test"
-@send external exec: (t, string) => Result.t = "exec"
+@return(nullable) @send external exec: (t, string) => option<Result.t> = "exec"
 
 @get external lastIndex: t => int = "lastIndex"
 @get external ignoreCase: t => bool = "ignoreCase"
