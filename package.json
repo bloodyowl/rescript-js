@@ -13,7 +13,8 @@
   "author": "bloodyowl <bloodyowl@icloud.com>",
   "license": "MIT",
   "devDependencies": {
-    "rescript": "^10.0.0-rc.1"
+    "rescript": "^10.0.1",
+    "@awebyte/rescript-jest": "0.9.2"
   },
   "dependencies": {
     "@ryyppy/rescript-promise": "^2.1.0"
