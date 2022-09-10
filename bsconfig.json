@@ -10,6 +10,11 @@
       "dir": "test",
       "subdirs": true,
       "type": "dev"
+    },
+    {
+      "dir": "__tests__",
+      "subdirs": true,
+      "type": "dev"
     }
   ],
   "suffix": ".bs.js",
@@ -18,6 +23,10 @@
     "in-source": true
   },
   "bs-dependencies": ["@ryyppy/rescript-promise"],
+  "bs-dev-dependencies": [
+      "@awebyte/rescript-jest",
+      "rescript-fast-check"
+  ],
   "warnings": {
     "error": "+101"
   }
