@@ -10,6 +10,11 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@awebyte/constrained-type@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@awebyte/constrained-type/-/constrained-type-1.0.0.tgz#566fd7d412746885877b68124db40477249c982d"
+  integrity sha512-3BDVEQVmEmGCwEhu0YKrYza4RMShPTLgSV73Fxm9jpOdK7pc1KOYYWu+eCT44+fGgMVLfyD4RxsW5XBFrg52pg==
+
 "@awebyte/rescript-jest@0.9.2":
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/@awebyte/rescript-jest/-/rescript-jest-0.9.2.tgz#bff5cee584db42856f76adf640b935bbb266e417"

@@ -22,7 +22,10 @@
     "module": "commonjs",
     "in-source": true
   },
-  "bs-dependencies": ["@ryyppy/rescript-promise"],
+  "bs-dependencies": [
+    "@awebyte/constrained-type",
+    "@ryyppy/rescript-promise"
+  ],
   "bs-dev-dependencies": [
       "@awebyte/rescript-jest",
       "rescript-fast-check"
