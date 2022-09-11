@@ -120,27 +120,27 @@ describe("byteOffset", () => {
     expect(actualByteOffset)->toBe(byteOffset)
   })
 })
-describe("getInt8 and setInt8", () => {
-  getFetchesSet(getInt8, setInt8, rawInt8Arb(), 8)
+describe("getInt8Raw and setInt8Truncated", () => {
+  getFetchesSet(getInt8Raw, setInt8Truncated, rawInt8Arb(), 8)
 })
-describe("getUint8 and setUint8", () => {
-  getFetchesSet(getUint8, setUint8, rawUInt8Arb(), 8)
+describe("getUint8Raw and setUint8Truncated", () => {
+  getFetchesSet(getUint8Raw, setUint8Truncated, rawUInt8Arb(), 8)
 })
-describe("getInt16 and setInt16", () => {
-  getFetchesSet(getInt16, setInt16, rawInt16Arb(), 16)
+describe("getInt16Raw and setInt16Truncated", () => {
+  getFetchesSet(getInt16Raw, setInt16Truncated, rawInt16Arb(), 16)
 })
-describe("getUint16 and setUint16", () => {
-  getFetchesSet(getUint16, setUint16, rawUInt16Arb(), 16)
+describe("getUint16Raw and setUint16Truncated", () => {
+  getFetchesSet(getUint16Raw, setUint16Truncated, rawUInt16Arb(), 16)
 })
 describe("getInt32 and setInt32", () => {
   getFetchesSet(getInt32, setInt32, integer(), 32)
 })
-describe("getUint32 and setUint32", () => {
-  getFetchesSet(getUint32, setUint32, rawUInt32Arb(), 32)
+describe("getUint32Raw and setUint32Truncated", () => {
+  getFetchesSet(getUint32Raw, setUint32Truncated, rawUInt32Arb(), 32)
 })
-describe("getInt64 and setBigInt64", () => {
-  getFetchesSet(getBigInt64, setBigInt64, rawInt64Arb(), 64)
+describe("getInt64Raw and setBigInt64Truncated", () => {
+  getFetchesSet(getBigInt64Raw, setBigInt64Truncated, rawInt64Arb(), 64)
 })
-describe("getUint64 and setBigUint64", () => {
-  getFetchesSet(getBigUint64, setBigUint64, rawUInt64Arb(), 64)
+describe("getUint64Raw and setBigUint64Truncated", () => {
+  getFetchesSet(getBigUint64Raw, setBigUint64Truncated, rawUInt64Arb(), 64)
 })
