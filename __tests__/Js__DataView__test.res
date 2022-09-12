@@ -45,12 +45,59 @@ let float32Arb = () => float_()->Derive.map(Value.makeExn(~constraint_=module(Fl
 
 let getFetchesSet = (
   ~testName: string="Get fetches set",
-  get: (DataView.t, int) => 'v,
-  set: (DataView.t, int, 'v) => unit,
+  get: (DataView.t, int, ~littleEndian: bool=?, unit) => 'v,
+  set: (DataView.t, int, 'v, ~littleEndian: bool=?, unit) => unit,
   valueArb: arbitrary<'v>,
   valueBitSize: int,
 ) => {
   let valueByteSize = valueBitSize / 8
+  let maxDataviewSize = 1000
+  test(testName, () => {
+    assert_(
+      property1(
+        dataviewArb(~minSize=valueByteSize, ~maxSize=maxDataviewSize)->Derive.chain(
+          dataview => {
+            let setIndexArb = integerRange(0, dataview->byteLength - valueByteSize)
+            Combinators.tuple4(
+              Combinators.constant(dataview),
+              setIndexArb,
+              valueArb,
+              Combinators.option(boolean()),
+            )
+          },
+        ),
+        ((dataview, setIndex, value, littleEndian)) => {
+          switch littleEndian {
+          | Some(littleEndian) => {
+              set(dataview, setIndex, value, ~littleEndian, ())
+              let getValue = get(dataview, setIndex, ~littleEndian, ())
+              expect(getValue)->toEqual(value)->affirm
+            }
+
+          | None => {
+              set(dataview, setIndex, value, ())
+              let getValue = get(dataview, setIndex, ())
+              expect(getValue)->toEqual(value)->affirm
+            }
+          }
+        },
+      ),
+    )
+    pass
+  })
+}
+
+/**
+Identical to getFetchesSet, but get and set don't take a littleEndian parameter, and 
+valueBitSize is implicitley 8
+*/
+let getFetchesSet8Bit = (
+  ~testName: string="Get fetches set",
+  get: (DataView.t, int) => 'v,
+  set: (DataView.t, int, 'v) => unit,
+  valueArb: arbitrary<'v>,
+) => {
+  let valueByteSize = 1
   let maxDataviewSize = 1000
   test(testName, () => {
     assert_(
@@ -273,17 +320,17 @@ describe("Constraints", () => {
 
 describe("Accessors", () => {
   describe("getInt8Raw and setInt8Truncated", () => {
-    getFetchesSet(getInt8Raw, setInt8Truncated, rawInt8Arb(), 8)
+    getFetchesSet8Bit(getInt8Raw, setInt8Truncated, rawInt8Arb())
   })
   describe("getInt8 and setInt8", () => {
-    getFetchesSet(getInt8, setInt8, int8Arb(), 8)
+    getFetchesSet8Bit(getInt8, setInt8, int8Arb())
   })
 
   describe("getUint8Raw and setUint8Truncated", () => {
-    getFetchesSet(getUint8Raw, setUint8Truncated, rawUInt8Arb(), 8)
+    getFetchesSet8Bit(getUint8Raw, setUint8Truncated, rawUInt8Arb())
   })
   describe("getUint8 and setUint8", () => {
-    getFetchesSet(getUint8, setUint8, uInt8Arb(), 8)
+    getFetchesSet8Bit(getUint8, setUint8, uInt8Arb())
   })
 
   describe("getInt16Raw and setInt16Truncated", () => {
