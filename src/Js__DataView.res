@@ -49,10 +49,11 @@ module Int64 = Constraint.MakeU({
 })
 module Float32 = Constraint.MakeU({
   type t = float
-  // Min and max value source: https://en.wikipedia.org/wiki/Single-precision_floating-point_format
-  let maxValue = 340282346638528859811704183484516925440.0
-  let minValue = -340282346638528859811704183484516925440.0
-  let isSatisfied = (. value) => (minValue <= value && value <= maxValue) || Js.Float.isNaN(value) || !Js.Float.isFinite(value)
+  // I'm not sure if checking Js.Math.isNan is nessesary.
+  // There is an old issue (https://github.com/rescript-lang/rescript-compiler/issues/161)
+  // addressing NaN == NaN in OCaml, but I can't find any documentation on how this is handled
+  // in Rescript.
+  let isSatisfied = (. value) => Js.Math.fround(value) == value || Js.Float.isNaN(value)
 })
 
 @send external getInt8Raw: (t, int) => int = "getInt8"
@@ -119,7 +120,7 @@ between -2,147,483,648 and 2,147,483,647.
 @send external setUint32Truncated: (t, int, float) => unit = "setUint32"
 @send external setUint32: (t, int, Value.t<float, UInt32.identity>) => unit = "setUint32"
 
-@send external setFloat32Truncated: (t, int, float) => unit = "setFloat32"
+@send external setFloat32Rounded: (t, int, float) => unit = "setFloat32"
 @send external setFloat32: (t, int, Value.t<float, Float32.identity>) => unit = "setFloat32"
 
 // No setFloat64Truncated since all valid float values are valid float64 values
