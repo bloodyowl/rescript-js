@@ -66,3 +66,7 @@ let sum = array
 ```
 
 Available modules are listed in [ReScriptJs.res](./src/ReScriptJs.res)
+
+## Documentation for Specific Modules
+
+[DataView](./docs/DataView.md)
