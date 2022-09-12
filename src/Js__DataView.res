@@ -28,11 +28,11 @@ module Int16 = Constraint.MakeU({
   let isSatisfied = (. value) => -32768 <= value && value <= 32767
 })
 module UInt32 = Constraint.MakeU({
-  // We use a float instead of an int since a uint32 can hold 
+  // We use a float instead of an int since a uint32 can hold
   // any value between 0 and 4,294,967,295. While int can only hold values
   // between -2,147,483,648 and 2,147,483,647.
   type t = float
-  let isInt = (.value) => Js.Math.round(value) == value
+  let isInt = (. value) => Js.Math.round(value) == value
   let isSatisfied = (. value) => 0.0 <= value && value <= 4294967295.0 && isInt(. value)
 })
 module UInt64 = Constraint.MakeU({
@@ -49,7 +49,7 @@ module Int64 = Constraint.MakeU({
 })
 module Float32 = Constraint.MakeU({
   type t = float
-  // Since NaN != NaN, we must check Js.Float.isNaN seperatley 
+  // Since NaN != NaN, we must check Js.Float.isNaN seperatley
   let isSatisfied = (. value) => Js.Math.fround(value) == value || Js.Float.isNaN(value)
 })
 
@@ -75,7 +75,8 @@ We return a float instead of an int since a uint32 can hold
 any value between 0 and 4,294,967,295. While int can only hold values
 between -2,147,483,648 and 2,147,483,647.
 */
-@send external getUint32Raw: (t, int) => float = "getUint32"
+@send
+external getUint32Raw: (t, int) => float = "getUint32"
 @send external getUint32: (t, int) => Value.t<float, UInt32.identity> = "getUint32"
 
 @send external getFloat32Raw: (t, int) => float = "getFloat32"
@@ -114,7 +115,8 @@ We take a float value instead of of an int since a uint32 can hold
 any value between 0 and 4,294,967,295. While int can only hold values
 between -2,147,483,648 and 2,147,483,647.
 */
-@send external setUint32Truncated: (t, int, float) => unit = "setUint32"
+@send
+external setUint32Truncated: (t, int, float) => unit = "setUint32"
 @send external setUint32: (t, int, Value.t<float, UInt32.identity>) => unit = "setUint32"
 
 @send external setFloat32Rounded: (t, int, float) => unit = "setFloat32"
@@ -127,4 +129,5 @@ between -2,147,483,648 and 2,147,483,647.
 @send external setBigInt64: (t, int, Value.t<Js__BigInt.t, Int64.identity>) => unit = "setBigInt64"
 
 @send external setBigUint64Truncated: (t, int, Js__BigInt.t) => unit = "setBigUint64"
-@send external setBigUint64: (t, int, Value.t<Js__BigInt.t, UInt64.identity>) => unit = "setBigUint64"
+@send
+external setBigUint64: (t, int, Value.t<Js__BigInt.t, UInt64.identity>) => unit = "setBigUint64"
