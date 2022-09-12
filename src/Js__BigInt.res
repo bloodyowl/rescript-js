@@ -31,8 +31,18 @@ external land: (t, t) => t = "%andint"
 external lor: (t, t) => t = "%orint"
 external lxor: (t, t) => t = "%xorint"
 
+// Left shfit
 external lsl: (t, t) => t = "%lslint"
+// Right shift
 external asr: (t, t) => t = "%asrint"
+// Less than
+external lt: (t, t) => bool = "#unsafe_lt"
+// Less than or equal to
+external le: (t, t) => bool = "#unsafe_le"
+// Greater than
+external gt: (t, t) => bool = "#unsafe_gt"
+// Greater than or equal to
+external ge: (t, t) => bool = "#unsafe_ge"
 
 let exp = (x: t, y: t) => {
   let _ = x
