@@ -39,20 +39,17 @@ module UInt64 = Constraint.MakeU({
   type t = Js__BigInt.t
   let maxValue = Js__BigInt.fromString("18446744073709551615")
   let minValue = Js__BigInt.fromFloat(0.0)
-  let isSatisfied = (. value) => minValue <= value && value <= maxValue
+  let isSatisfied = (. value) => minValue->Js__BigInt.le(value) && value->Js__BigInt.le(maxValue)
 })
 module Int64 = Constraint.MakeU({
   type t = Js__BigInt.t
   let maxValue = Js__BigInt.fromString("9223372036854775807")
   let minValue = Js__BigInt.fromString("-9223372036854775808")
-  let isSatisfied = (. value) => minValue <= value && value <= maxValue
+  let isSatisfied = (. value) => minValue->Js__BigInt.le(value) && value->Js__BigInt.le(maxValue)
 })
 module Float32 = Constraint.MakeU({
   type t = float
-  // I'm not sure if checking Js.Math.isNan is nessesary.
-  // There is an old issue (https://github.com/rescript-lang/rescript-compiler/issues/161)
-  // addressing NaN == NaN in OCaml, but I can't find any documentation on how this is handled
-  // in Rescript.
+  // Since NaN != NaN, we must check Js.Float.isNaN seperatley 
   let isSatisfied = (. value) => Js.Math.fround(value) == value || Js.Float.isNaN(value)
 })
 
