@@ -1,4 +1,4 @@
-type t
+type t = Js.Types.bigint_val
 
 @val external asIntN: (~width: int, t) => t = "BigInt.asIntN"
 @val external asUintN: (~width: int, t) => t = "BigInt.asUintN"
