@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project is archived as it's now included as the standard library in ReScript 12 (https://rescript-lang.org/blog/release-12-0-0#improved-standard-library)
+
 # ReScriptJs
 
 > Bindings to the JS standard library
